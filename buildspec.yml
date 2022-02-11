@@ -7,7 +7,7 @@ phases:
       - aws --version
       - echo $AWS_DEFAULT_REGION
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=490326839366.dkr.ecr.ap-northeast-2.amazonaws.com/ecs_test
+      - REPOSITORY_URI=490326839366.dkr.ecr.ap-northeast-1.amazonaws.com/test-ecr
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
@@ -19,4 +19,5 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
