@@ -1,19 +1,14 @@
-FROM node:14
+FROM ubuntu:latest
 
-# Create app directory
-WORKDIR /usr/src/app
+RUN apt-get update
+RUN apt-get install -y nginx
+RUN chown -R www-data:www-data /var/lib/nginx
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+        && ln -sf /dev/stderr /var/log/nginx/error.log
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
+CMD ["nginx", "-g", "daemon off;"]
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
 
-# Bundle app source
-COPY . .
-
-EXPOSE 8080
-CMD [ "node", "app.js" ]
+# Expose ports.
+EXPOSE 80
+EXPOSE 443
