@@ -9,14 +9,12 @@
         "logDriver": "awsfirelens",
         "secretOptions": null,
         "options": {
-          "AWS_Region": "ap-northeast-1",
-          "Type": "my_type",
-          "Port": "443",
-          "Host": "https://search-test-ecs-log-es-6ot23rluw6tgda5idkydseuqwy.ap-northeast-1.es.amazonaws.com",
-          "Index": "my_index",
-          "tls": "On",
-          "AWS_Auth": "On",
-          "Name": "es"
+          "bucket": "test-nginx-log-ecs",
+          "total_file_size": "1M",
+          "use_put_object": "On",
+          "upload_timeout": "1m",
+          "region": "ap-northeast-1",
+          "Name": "s3"
         }
       },
       "entryPoint": null,
@@ -121,7 +119,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:490326839366:task-definition/test-nginx:2",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:490326839366:task-definition/test-nginx:5",
   "family": "test-nginx",
   "requiresAttributes": [
     {
@@ -210,7 +208,7 @@
   "networkMode": "awsvpc",
   "runtimePlatform": null,
   "cpu": "256",
-  "revision": 2,
+  "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
