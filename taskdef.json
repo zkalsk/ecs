@@ -10,7 +10,7 @@
         "secretOptions": null,
         "options": {
           "Name": "es",
-          "Host": "https://search-test-44farcnrsvfsolrzz7h4dzcvke.ap-northeast-1.es.amazonaws.com",
+          "Host": "search-test-44farcnrsvfsolrzz7h4dzcvke.ap-northeast-1.es.amazonaws.com",
           "Port": "443",
           "Index": "my_index",
 		  "Type": "my_type",
