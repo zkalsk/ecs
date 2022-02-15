@@ -10,7 +10,7 @@
         "secretOptions": null,
         "options": {
           "Name": "es",
-          "Host": "vpc-es-kibana-log-aggregate-ulogjkhfnfdgpkxa7y5move424.ap-northeast-1.es.amazonaws.com",
+          "Host": "https://search-test-44farcnrsvfsolrzz7h4dzcvke.ap-northeast-1.es.amazonaws.com",
           "Port": "443",
           "Index": "my_index",
 		  "Type": "my_type",
