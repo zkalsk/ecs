@@ -10,7 +10,7 @@
         "secretOptions": null,
         "options": {
           "Name": "es",
-          "Host": "search-test-ecs-log-es-6ot23rluw6tgda5idkydseuqwy.ap-northeast-1.es.amazonaws.com",
+          "Host": "search-es-kibana-test-ynphryg4wonshi7yw2hi4wq7na.ap-northeast-1.es.amazonaws.com",
           "Port": "443",
           "Index": "my_index",
 		  "Type": "my_type",
